@@ -1,5 +1,5 @@
 $(document).ready(function(){ // everything will initialize when the page is ready
-    // Initialize Firebase
+  // Initialize Firebase
   var config = {
     apiKey: "AIzaSyD18OuMblJc0S9_oWszlKGk7ntxTvzApxs",
     authDomain: "what-should-i-cook.firebaseapp.com",
@@ -12,44 +12,47 @@ $(document).ready(function(){ // everything will initialize when the page is rea
 
 
 // set up initial login for user on landing page
-var provider = new firebase.auth.FacebookAuthProvider();
+// var provider = new firebase.auth.FacebookAuthProvider();
 
-  firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
+//   firebase.auth().signInWithPopup(provider).then(function(result) {
+//   // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+//   var token = result.credential.accessToken;
+//   // The signed-in user info.
+//   var user = result.user;
+//   // ...
+// }).catch(function(error) {
+//   // Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+//   // The email of the user's account used.
+//   var email = error.email;
+//   // The firebase.auth.AuthCredential type that was used.
+//   var credential = error.credential;
+//   // ...
+// });
 
-// move login user into profile page--where they can then begin selecting ingredients
+// move logged in user into profile page--where they can then begin selecting ingredients
 
 
 // create an empty array to hold the ingredients
 var userIng = [];
 
 // create click functions that read the value of each ingredient a user chooses
+var getIngredients = $('.submit').click(function(){
+  var ingVal = $('.button').val();
+  // push ingredients to the empty array
+});
 
-// push ingredients to the empty array
+
   
 // 
 
 // create variable that takes what's inside the ingredient array
 var idOfIngredient = userIng;
-// create variable that holds the query URL
 
 // insert ajax call
  $.ajax({
-            url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?ingredients=' + idOfIngredient,
+            url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/findByIngredients?number=6&ingredients=' + idOfIngredient,
             type: 'GET',
             dataType: "json",
             headers: {
@@ -57,11 +60,31 @@ var idOfIngredient = userIng;
                 "X-Mashape-Host": "spoonacular-recipe-food-nutrition-v1.p.mashape.com"
             },
             data: {}
-        }).done(function(data) {
-    console.log(data)
+        }).done(function(response) {
+    console.log(response)
+    for (var i = 0; i < response.length; i++) {
+// define what we want: title, image, cooking instructions
+// variables for each
+      var title = response[i].title;
+      var image = response[i].image;
+      var ingHave = response[i].usedIngredientCount;
+      var ingNeed = response[i].missedIngredientCount;
+      
+// $("#title").append()
+    };
+
+
     });
 
-// create function that returns a max of 5 recipes
+// create function that returns a max of 6 recipes
+// recipes: function(){
 
-})
+// }
+
+
+
+// append title, image, cooking instructions to divs
+
+
+});
 
