@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>place holder</title>
+	<title>Pantry-to-Plate</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
- <style>
- 	.jumbotron {
-    background-color: rgba(255,255,255,0.5);
-}
-body {
-	background-image: url(https://cdn.pixabay.com/photo/2017/03/14/07/56/wood-2142216_640.jpg);
-	background-size: 100%,100%
-}
- </style>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+     <style>
+     	.jumbotron {
+        background-color: rgba(255,255,255,0.5);
+    }
+    body {
+    	background-image: url(https://cdn.pixabay.com/photo/2017/03/14/07/56/wood-2142216_640.jpg);
+    	background-size: 100%,100%
+    }
+     </style>
 </head>
 <body>
+  <!-- Facebook script -->
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '218977465509505',
+      cookie     : true,
+      xfbml      : true,
+      version    : 'v2.12'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=218977465509505&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+  </script>
+<!-- Facebook script ends -->
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -75,8 +100,12 @@ body {
   <p>Resize this responsive page to see the effect!</p> 
 </div>
 <div class="container">
-
+  <!-- Facebook Login Button -->
+  <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
   <div class="container">
+  <!--Facebook Login Button ends --> 
+  
+<!-- where recipes will appear -->
     <div class="row">
         <div class="col-sm-4">
              <h3>Place holder</h3>
@@ -95,12 +124,6 @@ body {
         </div>
 	</div>
 </div>
-
-</body>
-</html>
-
-
-
-
+<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
