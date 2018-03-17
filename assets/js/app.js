@@ -1,5 +1,5 @@
-document.ready(){
-  // Initialize Firebase
+$(document).ready(function(){ // everything will initialize when the page is ready
+    // Initialize Firebase
   var config = {
     apiKey: "AIzaSyD18OuMblJc0S9_oWszlKGk7ntxTvzApxs",
     authDomain: "what-should-i-cook.firebaseapp.com",
@@ -35,6 +35,7 @@ var provider = new firebase.auth.FacebookAuthProvider();
 
 
 // create an empty array to hold the ingredients
+var userIng = [];
 
 // create click functions that read the value of each ingredient a user chooses
 
@@ -43,7 +44,7 @@ var provider = new firebase.auth.FacebookAuthProvider();
 // 
 
 // create variable that takes what's inside the ingredient array
-var idOfIngredient = [];
+var idOfIngredient = userIng;
 // create variable that holds the query URL
 
 // insert ajax call
@@ -62,9 +63,5 @@ var idOfIngredient = [];
 
 // create function that returns a max of 5 recipes
 
+})
 
-
-
-
-
-};
