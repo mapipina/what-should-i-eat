@@ -35,7 +35,7 @@ $(document).ready(function(){ // everything will initialize when the page is rea
 
 
 // create an empty array to hold the ingredients
-var userIng = [];
+var userIng = ["tomato", "garlic"];
 
 // create click functions that read the value of each ingredient a user chooses
 var getIngredients = $('.submit').click(function(){
@@ -69,6 +69,9 @@ var idOfIngredient = userIng;
       var image = response[i].image;
       var ingHave = response[i].usedIngredientCount;
       var ingNeed = response[i].missedIngredientCount;
+      console.log(title);
+      console.log(ingHave);
+      console.log(ingNeed);
       
 // $("#title").append()
     };
