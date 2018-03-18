@@ -1,0 +1,98 @@
+.MainNav{
+
+background-color: #343a40;
+height: 50px;
+
+};
+
+
+nav li{
+	display: inline-block;
+
+
+}
+
+.menu{
+	float: right;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+
+.menu a {
+
+	margin-left: 8px;
+	margin-right: 8px;
+	color: white;
+}
+
+
+
+.logo{
+	text-align: center;
+	margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 18px;
+
+}
+
+.pantryMenu img{
+	width:25px;
+	float: left;
+	margin-top: 10px;
+
+}
+
+
+.mainCont{
+	background-color: darkgrey;
+	padding-top: 50px;
+}
+
+#leftCont{
+
+	background-color: grey;
+	margin-top: 0px;
+	width: 250px;
+	
+
+
+}
+
+.item{
+ text-align: center;
+ width: 260px;
+ height: 300px;
+ border-radius: 2px;
+ border-color: white;
+ border-style: solid;
+ margin:auto;
+ margin-bottom: 20px;
+}
+
+
+
+
+/*  Recipes right Side css*/
+
+#RecipeTitle{
+	margin:auto;
+	margin-top: 10px;
+}
+
+.search-container{
+	margin:auto;
+}
+
+input {
+	width: 250px;
+	height: 35px;
+
+}
+
+
+
+
+
+
