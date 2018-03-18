@@ -44,8 +44,6 @@ var getIngredients = $('.submit').click(function(){
 });
 
 
-  
-// 
 
 // create variable that takes what's inside the ingredient array
 var idOfIngredient = userIng;
@@ -61,7 +59,8 @@ var idOfIngredient = userIng;
             },
             data: {}
         }).done(function(response) {
-    console.log(response)
+    console.log(response);
+    $(".jumbotron").append("<h2>" + "Recipes Available" + "</h2>");
     for (var i = 0; i < response.length; i++) {
 // define what we want: title, image, cooking instructions
 // variables for each
@@ -72,7 +71,18 @@ var idOfIngredient = userIng;
       console.log(title);
       console.log(ingHave);
       console.log(ingNeed);
-      
+      var recipeDiv = $("<div class=recipeCard>");
+      recipeDiv.addClass("col-sm-4");
+      var imageDiv = $("<img>");
+      imageDiv.append(image).attr("src", image);
+      // image.attr("src", image);
+      recipeDiv.prepend(imageDiv);
+     // image.prependTo(recipeDiv);
+      var titleP = $("<h3>" + title + "</h3>");
+      recipeDiv.append(titleP);
+      var ingredients = $("<p>" + "Matched Ingredients: " + ingHave + " Missing Ingredients: " + ingNeed + "</p>");
+      recipeDiv.append(ingredients);
+      $("#recipeArea").append(recipeDiv);
 // $("#title").append()
     };
 
