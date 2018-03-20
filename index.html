@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css">
      <style>
      	.jumbotron {
         background-color: rgba(255,255,255,0.5);
@@ -19,7 +21,8 @@
 </head>
 <body>
   <!-- Facebook script -->
-<!--   <script>
+<!-- <div id="fb-root"></div> 
+<script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '218977465509505',
@@ -32,13 +35,13 @@
       
   };
 
-(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=218977465509505&autoLogAppEvents=1';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=218977465509505&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 
   </script> -->
 <!-- Facebook script ends -->
@@ -97,12 +100,13 @@
 </nav>
 <div class="jumbotron text-center">
 
-  <h1>What Should I Cook?</h1>
+  <h1>Pantry-to-Plate</h1>
+  <!-- Facebook Login Button -->
+<!--   <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div> -->
+  <!--Facebook Login Button ends --> 
 </div>
 <div class="container">
-  <!-- Facebook Login Button -->
-  <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
-  <!--Facebook Login Button ends --> 
+
   
 <!-- where recipes will appear -->
 <div class="row" id="recipeArea">
