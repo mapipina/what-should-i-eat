@@ -38,8 +38,16 @@ var userIng = ["tomato", "garlic"];
 
 // create click functions that read the value of each ingredient a user chooses
 var getIngredients = $('.submit').click(function(){
+  swal({
+    title: "Awesome!",
+    text: "We're loading your recipes right now",
+    icon: "success",
+    button: "Check out recipes",
+  });
   var ingVal = $('.button').val();
-  // push ingredients to the empty array
+// push ingredients to the empty array
+  userIng.push(ingVal);
+
 });
 
 
@@ -49,6 +57,33 @@ var idOfIngredient = userIng;
 
 // create global var for recipeID in order to grab it from this AJAX call
 // var recipeID = "";
+
+// create AJAX call to create GET request for Recipe Information
+var getInstruction = function(recipeID, recipeDiv) {
+  $.ajax({
+  url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeID + '/information?includeNutrition=false',
+  type: 'GET',
+  dataType: 'json',
+  headers: {
+    "X-Mashape-Key": "X8yAVqBU1lmshLf36wrduOrjiFvRp1fHMHGjsnJNJmXznSEdqH",
+    "X-Mashape-Host": "spoonacular-recipe-food-nutrition-v1.p.mashape.com"
+  },
+  data: {}
+
+}).done(function(response){
+  console.log(response);
+  // within AJAX call, reference global variable for instructions
+  var instructions = response.instructions;
+  instrP = $("<p>" + instructions + "</p>");
+  instrP.addClass("instructionsP");
+  recipeDiv.append(instrP);
+
+//   for (var b = 0; b < response.length; b++) {
+//     var instructions = response[b].instructions;
+//     var instructionsDiv = $("")
+//   }
+  });
+};
 
 // insert ajax call
  $.ajax({
@@ -71,10 +106,6 @@ var idOfIngredient = userIng;
           var ingHave = response[i].usedIngredientCount;
           var ingNeed = response[i].missedIngredientCount;
           var recipeID = response[i].id;
-    // console logging results to make sure that everything is accurate
-          // console.log(title);
-          // console.log(ingHave);
-          // console.log(ingNeed);
      // append title, image, cooking instructions to divs
           var recipeDiv = $("<div class=recipeCard>");
           recipeDiv.addClass("col-sm-4");
@@ -83,15 +114,16 @@ var idOfIngredient = userIng;
           recipeDiv.prepend(imageDiv);
           var titleP = $("<h3>" + title + "</h3>");
           recipeDiv.append(titleP);
-          recipeDiv.data("recipeID", recipeID);
           var ingredients = $("<p>" + "Matched Ingredients: " + ingHave + "<br>" + " Missing Ingredients: " + ingNeed + "</p>");
           recipeDiv.append(ingredients);
           $("#recipeArea").append(recipeDiv);
+          console.log(recipeID);
+          getInstruction(recipeID, recipeDiv);
         };
-        return(recipeID);
-        console.log(recipeID);
+        
 
-        });
+      });
+
 // create AJAX call to create GET request for Recipe Information
 // $.ajax({
 //   url: 'https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/' + recipeID + '/information?includeNutrition=false',
