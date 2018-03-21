@@ -1,0 +1,211 @@
+.MainNav{
+
+background-color: #80c341;
+height: 50px;
+opacity: 50%;
+
+};
+
+
+nav li{
+	display: inline-block;
+
+
+}
+
+.menu{
+	float: right;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+
+.menu a {
+
+	margin-left: 8px;
+	margin-right: 8px;
+	color: white;
+}
+
+
+
+.logo{
+	text-align: center;
+	margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 18px;
+
+}
+
+.pantryMenu img{
+	width:25px;
+	float: left;
+	margin-top: 10px;
+	position: fixed;
+
+}
+
+.recipeSearch{
+	overflow: auto;
+
+	
+}
+
+
+#leftCont{
+
+	
+	margin-top: 0px;
+	width: 250px;
+
+	
+
+
+}
+
+.item{
+ text-align: center;
+ width: 260px;
+ height: 300px;
+ border-radius: 2px;
+ border-color: lightgrey;
+ border-style: solid;
+ margin:auto;
+ margin-bottom: 20px;
+}
+
+
+
+
+/*  Recipes right Side css*/
+
+#RecipeTitle{
+	margin:auto;
+	margin-top: 10px;
+}
+
+.search-container{
+	margin:auto;
+	
+}
+
+input {
+	width: 350px;
+	height: 50px;
+
+}
+
+
+/* buttons */
+
+#dropdownMenuButton{
+    
+	width: 350px;
+	height: 50px;
+	margin-top: 20px;
+	background-color: #80c441;
+}
+
+
+/*    test */
+.site-nav {
+
+  position: fixed;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  background: #222;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+}
+
+ 
+
+.site-nav a {
+
+  display: block;
+
+  border-bottom: 1px solid #666;
+
+  color: white;
+
+  padding: 34px;
+
+}
+
+  
+.site-nav a:hover,
+ 
+.site-nav a:focus {
+ 
+  background: #333;
+ 
+}
+ 
+ 
+ 
+.site-nav:after {
+ 
+  content: "";
+ 
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 4px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+ 
+
+#site-nav:target {
+
+  width: 30%;
+
+}
+
+ 
+
+#site-nav:target + .page-wrap {
+
+  width: 70%;
+
+}
+
+#site-nav:target + .page-wrap .close-menu {
+  display: block;
+}
+
+#site-nav:target + .page-wrap .main-header {
+  width: 70%;
+  left: 30%;
+}
+
+.main-header {
+  background: #222;
+  padding: 5px 0 5px 65px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.main-header a {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: white;
+  font-size: 32px;
+}
+
+.page-wrap {
+  float: right;
+  width: 100%;
+  transition: width 0.3s ease;
+
+
