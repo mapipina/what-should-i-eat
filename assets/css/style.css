@@ -1,0 +1,126 @@
+body{
+	font-family: 'Raleway', sans-serif;
+}
+.topNav{
+	background-color:#80c441;
+	height: 75px;
+
+}
+
+.topNav img{
+	width: 75px;
+
+}
+
+
+
+.menu{
+	float: right;
+	margin-right: 30px;
+	margin-top: 25px;
+	
+}
+
+.menu a{
+    margin-right:15px;
+	color: white;
+}
+
+
+
+/* Recipe Card Info*/
+
+#mainContent{
+	
+}
+
+.recipeCard img{
+	width:260px;
+} 
+
+.recipeCard{
+	margin-top: 30px;
+}
+
+#recipeArea{
+	
+}
+#recipeArea p {
+	text-align:center;
+}
+
+
+
+/* Recipe Card Info END*/
+
+
+/* Side Menu*/
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #80c441;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h3{
+	text-align: center;
+	color: #80c441;
+
+}
+
+.IngredCat{
+	margin-top: 30px;
+}
+
+.IngredCat h3{
+
+}
+
+.list img{
+	width:40px;
+	margin-right: 10px;
+}
+
+/* buttons */
+.IngredientsList {
+	margin-left: 35px;
+}
+
+form.list input[type=checkbox]{
+	height: 25px
+	width:25px;
+	
+}
+
+#FormButton{
+	width: 300px;
+	height: 45px;
+	background-color: #80c441;
+	margin-left:60px;
+	margin-top: 20px; 
+}
