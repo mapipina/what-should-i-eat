@@ -18,22 +18,21 @@
 </head>
 <body>
    <!--TOP Nav -->
-	<div class="container-fluid">
-		<div class="row  topNav">
-			<div class="col-sm-4 logo">
-				<img src="/assets/images/logo.png">
-			</div>
+	<nav class="container-fluid">
+       <div class="row  topNav">
+		 <div class="col-sm-4 logo">
+			<img src="/assets/images/logo.png">
+		 </div>
 
-			<div class="col-sm-8">
-				<div style="margin-right: 30px" class="menu">
+		<div class="col-sm-8">
+			<div style="margin-right: 30px" class="menu">
 				<a href="#"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> Sign In</a>
 				<a href="#"><i class="fa fa-cog fa-fw fa-lg" aria-hidden="true"></i>Settings</a>
 				<a href="#"><i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>Logo Out</a>
 			</div>
-			</div>
-
 		</div>
-	</div>
+       </div>
+	</nav>
 
 	<!--TOP NAV END-->
 
@@ -43,30 +42,28 @@
 			<div class="col-sm-8">
 				<div class="row" id="recipeArea">
 				<h3>Dinner’s Met its Match!</h3>
-				<p>Just add your ingredients and we instantly finds matching recipes from the most popular cooking websites!</p>
-				<p>To get started, choose your ingredients from the categories on the right</p>
+
+				 <p>Just add your ingredients and we instantly finds matching recipes from the most popular cooking websites!</p>
+
+				 <p>To get started, choose your ingredients from the categories on the right</p>
+					
 					<!-- Result will Populate here-->
 
 				</div>
 
 			</div>
 			<!-- Side menu-->
-			<div class="col-sm-4">
-				<div class="row"><h3>Choose Your Ingredients</h3></div>
-				<!--search Menu-->
-				<div class="row">
-					<div class="search">
-					  <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-  						 <input type="text" placeholder="Search.." name="search2">
-  						 <button type="submit"><i class="fa fa-search"></i></button>
-					  </form>
-   					</div>
-				</div>
+		<div class="col-sm-4">
+			<div class="row"><h3>Choose Your Ingredients</h3></div>
+			<!--search Menu-->
+			<div class="row">
+					
+			</div>
 
 				<!--buttons food-->
- 				<div class="row IngredCat" id="aside">
- 				<form>    
-					<button class="accordion"><img src="/assets/images/Vegetables.png">vegitable</button>
+ 			<aside class="row IngredCat">
+ 				<!-- <form method="POST"> -->
+				<button class="accordion"><img src="/assets/images/Vegetables.png">vegitable</button>
 					<div class="panel">
      					<input type="checkbox" name="vehicle" value="Onion"> Onion
    						<input type="checkbox" name="vehicle" value="corn"> corn
@@ -112,16 +109,10 @@
 					</div>
 					
 					<input id="FormButton" type="submit" value="Submit">
- 						
-				</form>
-			</div>
- 			
-		</div>
+			</aside>
+ 		</div>
+
 <script type="text/javascript" src="assets/js/app.js"></script>
-
-
-
-
 
 </body>
 </html>
