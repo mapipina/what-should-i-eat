@@ -20,6 +20,12 @@ var provider = new firebase.auth.FacebookAuthProvider();
   var user = result.user;
   console.log(user);
   // save user name
+  var name = result.displayName;
+  var email = result.email;
+  database.ref('users').push({
+    name: name,
+    email: email
+  });
 }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
