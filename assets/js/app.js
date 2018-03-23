@@ -52,6 +52,22 @@ var login = function(){
 $(document).ready(function(){
   setTimeout(login, 2000);
 
+  // Accordion for Ingredient list  
+ var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
+
 // move logged in user into profile page--where they can then begin selecting ingredients
 
 
@@ -59,6 +75,10 @@ $(document).ready(function(){
 // create functions that read the value of each ingredient a user chooses
   var getIngredients = $('.submit').click(function(){
     event.preventDefault();
+    // toggle the aside
+    $("aside").toggle();
+    var newGreeting = $("<h2 style=text-align:center>" + "Recipes Available" + "</h2>");
+    $(".greeting").html(newGreeting);
 // custom alert
     swal({
       title: "Awesome!",

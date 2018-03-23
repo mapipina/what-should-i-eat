@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Pantry-to-Plate</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="32x32">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,7 +22,7 @@
   <nav>
        <div class="row  topNav">
      <div class="col-sm-4 logo">
-      <img src="/assets/images/logo.png">
+      <img src="assets/images/logo.png">
      </div>
 
     <div class="fb-login-button col-sm-8" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
@@ -35,28 +36,22 @@
       <!--recipe generates here-->
       <div class="col-sm-8">
         <div class="row" id="recipeArea">
-        <h3>Let's get cookin'!</h3>
-
-         <p>Just add your ingredients and we instantly finds matching recipes from the most popular cooking websites!</p>
-
-         <p>To get started, choose your ingredients from the categories on the right</p>
+          <div class="greeting">
+            <h3>Let's get cookin'!</h3>
+            <p>Just add your ingredients and we instantly finds matching recipes from the most popular cooking websites!</p>
+            <p>To get started, choose your ingredients from the categories on the right</p>
+          </div>
+ 
           <!-- Result will Populate here-->
-
       </div>
-
     </div>
-      <!-- Side menu-->
-    <div class="col-sm-4">
-      <div class="row"><h3>Choose Your Ingredients</h3></div>
-      <!--search Menu-->
-      <div class="row">
-          
-      </div>
 
         <!--buttons food-->
       <aside class="row IngredCat">
+        <div class="col-sm-4">
+        <div class="row"><h3>Choose Your Ingredients</h3></div>
         <!-- <form method="POST"> -->
-        <button class="accordion"><img src="/assets/images/Vegetables.png">Vegetables</button>
+        <div class="accordion"><img src="assets/images/Vegetables.png">Vegetables</div>
           <div class="panel">
               <input type="checkbox" name="vehicle" value="Onion"> Onion
               <input type="checkbox" name="vehicle" value="Corn"> Corn
@@ -67,7 +62,7 @@
                 <input type="checkbox" name="vehicle" value="Garlic"> Garlic
           </div>
             <br/>
-          <button class="accordion"><img src="/assets/images/Baking & Grains.png">Grains</button>
+          <div class="accordion"><img src="assets/images/Baking & Grains.png">Grains</div>
           <div class="panel">
                <input type="checkbox" name="vehicle" value="Pasta"> Pasta
                <input type="checkbox" name="vehicle" value="Rice"> Rice   
@@ -77,7 +72,7 @@
                          <input type="checkbox" name="vehicle" value="Corn Tortilla"> Corn Tortilla<br/>
                     </div>
             <br/>
-                    <button class="accordion"><img src="/assets/images/Dairy.png">Dairy</button>
+                    <div class="accordion"><img src="assets/images/Dairy.png">Dairy</div>
                     <div class="panel">
                <input type="checkbox" name="vehicle" value="Butter"> Butter
                <input type="checkbox" name="vehicle" value="Eggs"> Eggs
@@ -88,7 +83,7 @@
                <input type="checkbox" name="vehicle" value="Yogurt"> Yogurt <br/>
           </div>
             <br/>
-          <button class="accordion"><img src="/assets/images/Meats.png">Meats</button>
+          <div class="accordion"><img src="assets/images/Meats.png">Meats</div>
           <div class="panel">
               <input type="checkbox" name="vehicle" value="Chicken">Chicken
               <input type="checkbox" name="vehicle" value="Ground Beef">Ground Beef
@@ -98,7 +93,7 @@
               <input type="checkbox" name="vehicle" value="Turkey">Turkey
            </div>
           
-          <input id="FormButton" type="submit" value="Submit">
+          <input class="submit"  id="FormButton" type="submit" value="Submit">
 
       </aside>
   </div>
