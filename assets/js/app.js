@@ -10,6 +10,8 @@
   };
   firebase.initializeApp(config);
 
+  var database = firebase.database();
+
 
 // set up initial login for user on landing page
 var provider = new firebase.auth.FacebookAuthProvider();
@@ -22,10 +24,6 @@ var provider = new firebase.auth.FacebookAuthProvider();
   // save user name
   var name = result.displayName;
   var email = result.email;
-  database.ref('users').push({
-    name: name,
-    email: email
-  });
 }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -36,6 +34,12 @@ var provider = new firebase.auth.FacebookAuthProvider();
   var credential = error.credential;
   // ...
 });
+
+// UPDATE database
+  database.ref('users').push({
+    name: name,
+    email: email
+  });
 
 // move logged in user into profile page--where they can then begin selecting ingredients
 
