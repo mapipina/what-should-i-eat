@@ -97,6 +97,7 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+<!-- beginning of page content -->
 <div class="jumbotron text-center">
   <h1>Pantry-to-Plate</h1>
 </div>
@@ -117,19 +118,9 @@
       <!-- Side menu-->
       <div class="col-sm-4">
         <div class="row"><h3>Choose Your Ingredients</h3></div>
-        <!--search Menu-->
-        <div class="row">
-          <div class="search">
-            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-               <input type="text" placeholder="Search.." name="search2">
-               <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-            </div>
-        </div>
 
         <!--buttons food-->
-        <div class="row IngredCat" id="aside">        
-              <form action="/action_page.php" method="get" class="list">
+        <aside class="row IngredCat" id="aside">        
               <h3><img src="assets/images/Vegetables.png">Vegetables</h3>
               <div class="IngredientsList">
                 <input type="checkbox" name="vehicle" value="Onion"> Onion
@@ -176,14 +167,13 @@
                 <input type="checkbox" name="vehicle" value="Steak">Steak
                 <input type="checkbox" name="vehicle" value="Pork">Pork
                 <input type="checkbox" name="vehicle" value="Turkey">Turkey
-                <input type="checkbox" name="vehicle" value="Whole chicken">Chicken
                 <br/>
               </div>
-            <input class="submit" id="FormButton" type="submit" value="Submit">
-<!--             <form action="/action_page.php" method="get">
-            </form> -->                       
-       </div>
+            <input class="submit" id="FormButton" type="submit" value="Submit">                    
+       </aside>
 </div>
+
 <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
+
 </html>
