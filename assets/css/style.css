@@ -33,33 +33,42 @@ body{
 	
 }
 
-.recipeCard img{
-	width:260px;
-} 
-
-.ingredients{
+/*.ingredients{
 	font-weight: bold;
+	text-align: left;
 }
-
+*/
 
 .recipeCard{
-	margin-top: 30px;
+	margin-top: 15px;
+	float: left;
 }
 
-#recipeArea{
-
-	
+.recipeImg {
+	max-height: 150px;
+	max-width: 150px;
 }
+
 #recipeArea p {
-	text-align:center;
+	text-align: left;
 	font-weight: bold;
 }
 
 .instructionsP {
-
     height: 100px;
     overflow: scroll;
-  }
+    text-align: left,
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: cornflowerblue; 
+    border-radius: 5px;
+}
+
 
 
 /* Recipe Card Info END*/
@@ -99,7 +108,7 @@ form.example::after {
 }
 
 h3{
-	text-align: center;
+	text-align: left;
 	color: #80c441;
 
 }

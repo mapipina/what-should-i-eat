@@ -142,8 +142,8 @@ for (i = 0; i < acc.length; i++) {
             var recipeID = response[i].id;
        // append title, image, cooking instructions to divs
             var recipeDiv = $("<div class=recipeCard>");
-            recipeDiv.addClass("col-sm-4");
-            var imageDiv = $("<img>");
+            recipeDiv.addClass("col-sm-5 col-sm-offset-1");
+            var imageDiv = $("<img class=recipeImg>");
             imageDiv.append(image).attr("src", image);
             recipeDiv.prepend(imageDiv);
             var titleP = $("<h3>" + title + "</h3>");
