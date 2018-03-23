@@ -18,7 +18,8 @@ var provider = new firebase.auth.FacebookAuthProvider();
   var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
-  // ...
+  console.log(user);
+  // save user name
 }).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
@@ -32,9 +33,10 @@ var provider = new firebase.auth.FacebookAuthProvider();
 
 // move logged in user into profile page--where they can then begin selecting ingredients
 
+
 $(document).ready(function(){
 // create an empty array to hold the ingredients
-var userIng = ["tomato", "garlic"];
+var userIng = [];
 
 // create click functions that read the value of each ingredient a user chooses
 var getIngredients = $('.submit').click(function(){
@@ -53,7 +55,6 @@ var getIngredients = $('.submit').click(function(){
 
 // create variable that takes what's inside the ingredient array
 var idOfIngredient = userIng;
-
 
 // create AJAX call to create GET request for Recipe Information
 var getInstruction = function(recipeID, recipeDiv) {
@@ -112,6 +113,7 @@ var getInstruction = function(recipeID, recipeDiv) {
           var titleP = $("<h3>" + title + "</h3>");
           recipeDiv.append(titleP);
           var ingredients = $("<p>" + "Matched Ingredients: " + ingHave + "<br>" + " Missing Ingredients: " + ingNeed + "</p>");
+          ingredients.addClass("ingredients");
           recipeDiv.append(ingredients);
           $("#recipeArea").append(recipeDiv);
           console.log(recipeID);

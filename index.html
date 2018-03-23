@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
 	<title>Pantry-to-Plate</title>
+  <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="32x32">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- CSS -->
@@ -12,6 +13,7 @@
   <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
   <!-- <script src="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.6.3/firebaseui.css"> -->
 
@@ -96,33 +98,91 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="jumbotron text-center">
-
   <h1>Pantry-to-Plate</h1>
-  <!-- Facebook Login Button -->
-<!--   <div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="false"></div> -->
-  <!--Facebook Login Button ends --> 
 </div>
-<div class="container">
-
-  
+  <div class="container">
 <!-- where recipes will appear -->
-<div class="row" id="recipeArea">
-<!--         <div class="col-sm-4">
-             <h3>Place holder</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    <div class="row" id="mainContent">
+      <!--recipe generates here-->
+      <div class="col-sm-8">
+        <div class="row" id="recipeArea">
+        <h3>Let's get cookin'</h3>
+        <p>Just add your ingredients and we instantly finds matching recipes from the most popular cooking websites!</p>
+        <p>To get started, choose your ingredients from the categories on the right.</p>
+          <!-- Result will Populate here-->
+
         </div>
-        <div class="col-sm-4">
-             <h3>Place holder</h3>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+
+      </div>
+      <!-- Side menu-->
+      <div class="col-sm-4">
+        <div class="row"><h3>Choose Your Ingredients</h3></div>
+        <!--search Menu-->
+        <div class="row">
+          <div class="search">
+            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+               <input type="text" placeholder="Search.." name="search2">
+               <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            </div>
         </div>
-        <div class="col-sm-4">
-             <h3>Place holder</h3>        
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-        </div> -->
-	</div> 
+
+        <!--buttons food-->
+        <div class="row IngredCat" id="aside">        
+              <form action="/action_page.php" method="get" class="list">
+              <h3><img src="assets/images/vegetables.png">Vegetables</h3>
+              <div class="IngredientsList">
+                <input type="checkbox" name="vehicle" value="Onion"> Onion
+                <input type="checkbox" name="vehicle" value="Corn"> Corn
+                <input type="checkbox" name="vehicle" value="Kale"> Kale
+                <br/>
+                <input type="checkbox" name="vehicle" value="Potato"> Potato
+                <input type="checkbox" name="vehicle" value="Tomato"> Tomato
+                <input type="checkbox" name="vehicle" value="Carrot"> Carrot
+                <input type="checkbox" name="vehicle" value="Garlic"> Garlic <br/>
+            </div>
+
+              <h3><img src="assets/images/Baking & Grains.png">Grains</h3>
+              <div class="IngredientsList">
+                <input type="checkbox" name="vehicle" value="Pasta"> Pasta
+                <input type="checkbox" name="vehicle" value="Rice"> Rice
+                <input type="checkbox" name="vehicle" value="Bread"> Bread
+                <br/>
+                <input type="checkbox" name="vehicle" value="Flour"> Flour
+                <input type="checkbox" name="vehicle" value="Yeast"> Yeast
+                <input type="checkbox" name="vehicle" value="Baking-Powder">  Baking Powder
+                <input type="checkbox" name="vehicle" value="Tortilla"> Corn Tortilla<br/>
+              </div>
+ 
+              <h3><img src="assets/images/Dairy.png">Dairy</h3>
+              <div class="IngredientsList">
+                <input type="checkbox" name="vehicle" value="Butter"> Butter
+                <input type="checkbox" name="vehicle" value="Eggs"> Eggs
+                <input type="checkbox" name="vehicle" value="Milk"> Milk
+                <br>
+                <input type="checkbox" name="vehicle" value="Cheddar Cheese">Cheddar Cheese
+                <input type="checkbox" name="vehicle" value="Mozzerla"> Mozzerla
+                <input type="checkbox" name="vehicle" value="Sour Cream"> Sour Cream
+                <input type="checkbox" name="vehicle" value="Yougurt"> Yougurt <br/>
+              </div>
+
+                
+              <h3><img src="assets/images/Meats.png">Meats</h3>
+              <div class="IngredientsList">
+                <input type="checkbox" name="vehicle" value="chicken breast">Chicken Breast
+                <input type="checkbox" name="vehicle" value="ground beef">Ground Beef
+                <input type="checkbox" name="vehicle" value="bacon">Bacon
+                <br/>
+                <input type="checkbox" name="vehicle" value="Steak">Steak
+                <input type="checkbox" name="vehicle" value="Pork">Pork
+                <input type="checkbox" name="vehicle" value="Turkey">Turkey
+                <input type="checkbox" name="vehicle" value="Whole chicken">Chicken
+                <br/>
+              </div>
+            <input class="submit" id="FormButton" type="submit" value="Submit">
+<!--             <form action="/action_page.php" method="get">
+            </form> -->                       
+       </div>
 </div>
 <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
