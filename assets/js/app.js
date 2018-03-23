@@ -15,16 +15,24 @@
 
 // set up initial login for user on landing page
 var provider = new firebase.auth.FacebookAuthProvider();
-  firebase.auth().signInWithPopup(provider).then(function(result) {
+
+var handleSuccessfulLogin = function(result) {
   // This gives you a Facebook Access Token. You can use it to access the Facebook API.
   var token = result.credential.accessToken;
   // The signed-in user info.
   var user = result.user;
   console.log(user);
   // save user name
-  var name = result.displayName;
-  var email = result.email;
-}).catch(function(error) {
+  var name = result.user.displayName;
+  var email = result.user.email;
+  // UPDATE database
+  database.ref('users').push({
+    name: name,
+    email: email
+  });
+}
+
+var handleLoginError = function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
@@ -33,30 +41,33 @@ var provider = new firebase.auth.FacebookAuthProvider();
   // The firebase.auth.AuthCredential type that was used.
   var credential = error.credential;
   // ...
-});
+}
 
-// UPDATE database
-  database.ref('users').push({
-    name: name,
-    email: email
-  });
 
-// move logged in user into profile page--where they can then begin selecting ingredients
+var login = function(){
+  firebase.auth().signInWithPopup(provider).then(handleSuccessfulLogin).catch(handleLoginError);
+}
 
 
 $(document).ready(function(){
+setTimeout(login, 2000);
+
+// move logged in user into profile page--where they can then begin selecting ingredients
+
 // create an empty array to hold the ingredients
 var userIng = [];
 
 // create click functions that read the value of each ingredient a user chooses
 var getIngredients = $('.submit').click(function(){
+  var ingVal = $('[input:checkbox]').val();
+
   swal({
     title: "Awesome!",
     text: "We're loading your recipes right now",
     icon: "success",
     button: "Check out recipes",
   });
-  var ingVal = $('input').val();
+
 // push ingredients to the empty array
   userIng.push(ingVal);
 
