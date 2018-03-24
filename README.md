@@ -29,7 +29,9 @@ Objective: Help people search what to cook with the little ingredients they have
 	- Insomnia for AJAX testing
 	- Firebase and Facebook for user authentication
 	- Firebase for user storage
-	-Sourcetree
+	- Sourcetree in lieu of MAC terminal or Git Bash
+	- GitHub for repositories 
+	- GitHub Projects for collaboration
 
 # APIs
 	- Spoonacular for recipe titles, images, ingredient search
