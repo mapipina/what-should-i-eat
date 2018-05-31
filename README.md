@@ -3,6 +3,9 @@ Introducing Pantry to Plate, we have developed a clean, user-friendly simplistic
 
 Objective: Help people search what to cook with the little ingredients they have in pantry/fridge.
 
+# Demo
+(https://drive.google.com/file/d/1FJldOTnOXJ9c2oqKmFcwRRuiQeftHXhM/view)
+
 # User Flow
 	1. Lands on homepage
 	2. Firebase pop-up initializes Facebook authentication and login
@@ -39,10 +42,10 @@ Objective: Help people search what to cook with the little ingredients they have
 	- Spoonacular (separate) for the actual recipe instructions
 
 # Roles
-	- Mapi, *JavaScript Developer and Project Manager*
-	- Jackie, *Backend Developer*
-	- Yamil, *Frontend Developer*
-	- Pedro, *Frontend Developer*
+	- Mapi, JavaScript Developer and Project Manager
+	- Jackie, Backend Developer
+	- Yamil, Frontend Developer
+	- Pedro, Frontend Developer
 
 
 # Future of This App
