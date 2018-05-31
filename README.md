@@ -4,7 +4,7 @@ Introducing Pantry to Plate, we have developed a clean, user-friendly simplistic
 Objective: Help people search what to cook with the little ingredients they have in pantry/fridge.
 
 # Demo
-(https://drive.google.com/file/d/1FJldOTnOXJ9c2oqKmFcwRRuiQeftHXhM/view)
+[View Demo!](https://drive.google.com/file/d/1FJldOTnOXJ9c2oqKmFcwRRuiQeftHXhM/view)
 
 # User Flow
 	1. Lands on homepage
